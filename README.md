@@ -165,7 +165,10 @@ The median value of "SBA_portion" is much lower for charged-off loans (50%) than
 A recession has an impact on businesses and loans: loans are more likely to default during a recession.
 
 I added a feature "Is_Recession_08" stating whether the loan has been going on during the Great Recession (dec 2007- june 2009): as we can't predict a recession a long time before it happens, I only took into account in this feature the **loans that started during the Great Recession**: it will help predict loans in future recession (2020 for example...) 
-<p align="center"> <img images/recession.png> </p>
+
+<p align="center">
+    <img src=images/recession.png>
+<\p>
 
 The default rate for loans starting during the Great Recession (34%) is much higher than for other loans (17%).
 
@@ -180,7 +183,9 @@ The bank will lose both principal and interest if a loan is misclassified as "wi
 while the bank will only incur opportunity cost in the amount of interest if a loan is misclassified as "will charge-off".
 
 So we want to prioritize minimizing the false negative rate: the metric we will use is the **recall**: 
+
 ![](images/recall.png)
+
 where: 
 - TP = number of True Positive
 - FN = number of False Negative
