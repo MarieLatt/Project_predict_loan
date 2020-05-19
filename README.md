@@ -148,7 +148,7 @@ The default rate varies with whether:
 (When jobs are retained, there is no statistically significant difference between the 2 samples "No Job Created" and "Jobs Created" (T-test's p-value = 0.08))
 
 <p align="center">
-    <img src=images/jobs.png>
+    <img src=images/jobs.png height = 400>
 </p>
 
 So I created 1 column with these 3 categories.
