@@ -98,16 +98,16 @@ I filled the missing values and corrected possible errors in the dataset followi
 We need this feature because states have different economic environments that can influence the default rate:
 
 <p align="center">
-    <img src=images/states.png>
-<\p>
+    <img src=images/states.png >
+</p>
 
 ### Economic Sector
 
 We extract the economic sector from the NAICS variable. The économic sector can be a usefull feature: in different sectors, the default rate are signicatively different:
 
 <p align="center">
-    <img src=images/sector.png>
-<\p>
+    <img src=images/sector.png height= 864>
+</p>
 
 ### New Business
 
@@ -115,7 +115,7 @@ The fact that a business is new (less than 2 years) or is active for more than 2
 
 <p align="center">
     <img src=images/new.png>
-<\p>
+</p>
 
 The p-value of the T-test (two-sided test for the null hypothesis that the 2 independent samples - New Businesses and Existing Businesses -  have identical average (expected) Is_CHGOFF values (= default rate)) is 6.10<sup>-85</sup>: there is a statistically significant difference between the default rates of the 2 samples.
 
@@ -125,7 +125,7 @@ The fact that a business has a revolving line of credit or not varies significan
 
 <p align="center">
     <img src=images/revlinecr.png>
-<\p>
+</p>
 
 ### Number of employees
 
@@ -133,7 +133,7 @@ Businnesses with no or a few employees are mostly new businesses that are more f
 
 <p align="center">
     <img src=images/employees.png>
-<\p>
+</p>
     
 
 
@@ -149,7 +149,7 @@ The default rate varies with whether:
 
 <p align="center">
     <img src=images/jobs.png>
-<\p>
+</p>
 
 So I created 1 column with these 3 categories.
 
@@ -162,7 +162,7 @@ The default rate is much higher for loans with a term < 120 months than for the 
 
 <p align="center">
     <img src=images/realestate.png>
-<\p>
+</p>
 
 
 ### Amount approved by the bank
@@ -171,7 +171,7 @@ The distribution of the Amount approved by the bank in the charged-off loans and
 
 <p align="center">
     <img src=images/amount.png>
-<\p>
+</p>
 
 
 
@@ -182,7 +182,7 @@ I created a feature "SBA_portion" corresponding to the ratio between the SBA's g
 
 <p align="center">
     <img src=images/portion.png>
-<\p>
+</p>
 
 The median value of "SBA_portion" is much lower for charged-off loans (50%) than paid in full loans (75%).
 
@@ -194,7 +194,7 @@ I added a feature "Is_Recession_08" stating whether the loan has been going on d
 
 <p align="center">
     <img src=images/recession.png>
-<\p>
+</p>
 
 The default rate for loans starting during the Great Recession (34%) is much higher than for other loans (17%).
 
