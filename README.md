@@ -106,6 +106,7 @@ We extract the economic sector from the NAICS variable. The économic sector can
 ### New Business
 
 The fact that a business is new (less than 2 years) or is active for more than 2 years can influence the default rate:
+
 ![](images/new.png)
 
 The p-value of the T-test (two-sided test for the null hypothesis that the 2 independent samples - New Businesses and Existing Businesses -  have identical average (expected) Is_CHGOFF values (= default rate)) is $6.10^{-85}$: there is a statistically significant difference between the default rates of the 2 samples.
@@ -113,11 +114,13 @@ The p-value of the T-test (two-sided test for the null hypothesis that the 2 ind
 ### Revolving line of credit
 
 The fact that a business has a revolving line of credit or not varies significantly the default rate:
+
 ![](images/revlinecr.png)
 
 ### Number of employees
 
 Businnesses with no or a few employees are mostly new businesses that are more fragile. The distribution of the number of employees in the charged-off loans and for the paid in full loans is different: charged-off loans correspond to less employees in average.
+
 ![](images/employees.png)
 
 
@@ -141,6 +144,7 @@ So I created 1 column with these 3 categories.
 Loans are limited to a 10 years term, except for the real estate and construction loans that are limited to a 25 years term.
 I created a binary variable, “Is_RealEstate” where “Is_RealEstate” = 1 if “Term” > 120 months and “Is_RealEstate” = 0 if “Term” <120 months.
 The default rate is much higher for loans with a term < 120 months than for the loans with a term > 120 months:
+
 ![](images/realestate.png)
 
 ### Amount approved by the bank
@@ -161,8 +165,7 @@ The median value of "SBA_portion" is much lower for charged-off loans (50%) than
 A recession has an impact on businesses and loans: loans are more likely to default during a recession.
 
 I added a feature "Is_Recession_08" stating whether the loan has been going on during the Great Recession (dec 2007- june 2009): as we can't predict a recession a long time before it happens, I only took into account in this feature the **loans that started during the Great Recession**: it will help predict loans in future recession (2020 for example...) 
-
-![](images/recession.png)
+![](images/recession.png?style=centerme)
 The default rate for loans starting during the Great Recession (34%) is much higher than for other loans (17%).
 
 
