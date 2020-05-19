@@ -68,9 +68,9 @@ All loans in the dataset have a known status:
 
 From this [document](https://www.sba.gov/sites/default/files/SDOLoanFactSheet_Oct_2011.pdf):
 
-- **Guarantee Portion** - Under the 7(a) guaranteed loan program SBA typically guarantees from 50% to 85% of an eligible bankloan up to a maximum guaranty amount of \\$3,750,000. The exact percentage of the guaranty depends on a variety of factors such as size of loan and which SBA program is to be used. This will be worked out between the SBA and your bank.
-- **Amounts** - The maximum loan amount is \\$5 million. The total SBA guarantee for any one borrower may not exceed
-\\$3,750,000. 
+- **Guarantee Portion** - Under the 7(a) guaranteed loan program SBA typically guarantees from 50% to 85% of an eligible bankloan up to a maximum guaranty amount of \$3,750,000. The exact percentage of the guaranty depends on a variety of factors such as size of loan and which SBA program is to be used. This will be worked out between the SBA and your bank.
+- **Amounts** - The maximum loan amount is \$5 million. The total SBA guarantee for any one borrower may not exceed
+\$3,750,000. 
 - **Maturity** - Up to 25 years for real estate acquisition or construction. Most other SBA loans are limited to 10 years. Working
 capital loans are generally limited to seven years. 
 
@@ -109,7 +109,7 @@ The fact that a business is new (less than 2 years) or is active for more than 2
 
 ![](images/new.png)
 
-The p-value of the T-test (two-sided test for the null hypothesis that the 2 independent samples - New Businesses and Existing Businesses -  have identical average (expected) Is_CHGOFF values (= default rate)) is $6.10^{-85}$: there is a statistically significant difference between the default rates of the 2 samples.
+The p-value of the T-test (two-sided test for the null hypothesis that the 2 independent samples - New Businesses and Existing Businesses -  have identical average (expected) Is_CHGOFF values (= default rate)) is 6.10<sup>-85</sup>: there is a statistically significant difference between the default rates of the 2 samples.
 
 ### Revolving line of credit
 
@@ -165,7 +165,8 @@ The median value of "SBA_portion" is much lower for charged-off loans (50%) than
 A recession has an impact on businesses and loans: loans are more likely to default during a recession.
 
 I added a feature "Is_Recession_08" stating whether the loan has been going on during the Great Recession (dec 2007- june 2009): as we can't predict a recession a long time before it happens, I only took into account in this feature the **loans that started during the Great Recession**: it will help predict loans in future recession (2020 for example...) 
-![](images/recession.png?style=centerme)
+<p align="center"> <img images/recession.png> </p>
+
 The default rate for loans starting during the Great Recession (34%) is much higher than for other loans (17%).
 
 
@@ -179,7 +180,7 @@ The bank will lose both principal and interest if a loan is misclassified as "wi
 while the bank will only incur opportunity cost in the amount of interest if a loan is misclassified as "will charge-off".
 
 So we want to prioritize minimizing the false negative rate: the metric we will use is the **recall**: 
-$$ \frac{TP}{TP+FN} $$
+![](images/recall.png)
 where: 
 - TP = number of True Positive
 - FN = number of False Negative
