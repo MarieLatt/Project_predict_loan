@@ -96,18 +96,26 @@ I filled the missing values and corrected possible errors in the dataset followi
  I filled the missing values with information from the Zip code where there are no missing values (I used the mode of State for the subset with matching zip code)
  
 We need this feature because states have different economic environments that can influence the default rate:
-![](images/states.png)
+
+<p align="center">
+    <img src=images/states.png>
+<\p>
 
 ### Economic Sector
 
 We extract the economic sector from the NAICS variable. The économic sector can be a usefull feature: in different sectors, the default rate are signicatively different:
-![](images/sector.png)
+
+<p align="center">
+    <img src=images/sector.png>
+<\p>
 
 ### New Business
 
 The fact that a business is new (less than 2 years) or is active for more than 2 years can influence the default rate:
 
-![](images/new.png)
+<p align="center">
+    <img src=images/new.png>
+<\p>
 
 The p-value of the T-test (two-sided test for the null hypothesis that the 2 independent samples - New Businesses and Existing Businesses -  have identical average (expected) Is_CHGOFF values (= default rate)) is 6.10<sup>-85</sup>: there is a statistically significant difference between the default rates of the 2 samples.
 
@@ -115,13 +123,18 @@ The p-value of the T-test (two-sided test for the null hypothesis that the 2 ind
 
 The fact that a business has a revolving line of credit or not varies significantly the default rate:
 
-![](images/revlinecr.png)
+<p align="center">
+    <img src=images/revlinecr.png>
+<\p>
 
 ### Number of employees
 
 Businnesses with no or a few employees are mostly new businesses that are more fragile. The distribution of the number of employees in the charged-off loans and for the paid in full loans is different: charged-off loans correspond to less employees in average.
 
-![](images/employees.png)
+<p align="center">
+    <img src=images/employees.png>
+<\p>
+    
 
 
 ### Jobs Created and Retained
@@ -134,7 +147,9 @@ The default rate varies with whether:
 
 (When jobs are retained, there is no statistically significant difference between the 2 samples "No Job Created" and "Jobs Created" (T-test's p-value = 0.08))
 
-![](images/jobs.png)
+<p align="center">
+    <img src=images/jobs.png>
+<\p>
 
 So I created 1 column with these 3 categories.
 
@@ -145,19 +160,30 @@ Loans are limited to a 10 years term, except for the real estate and constructio
 I created a binary variable, “Is_RealEstate” where “Is_RealEstate” = 1 if “Term” > 120 months and “Is_RealEstate” = 0 if “Term” <120 months.
 The default rate is much higher for loans with a term < 120 months than for the loans with a term > 120 months:
 
-![](images/realestate.png)
+<p align="center">
+    <img src=images/realestate.png>
+<\p>
+
 
 ### Amount approved by the bank
 
 The distribution of the Amount approved by the bank in the charged-off loans and for the paid in full loans is different: charged-off loans correspond to a smaller amount in average.
-![](images/amount.png)
+
+<p align="center">
+    <img src=images/amount.png>
+<\p>
+
 
 
 ### SBA’s Guaranteed Portion of Approved Amount
 
 The gross amount of the loan approved by the bank and the SBA's guaranteed amount are highly correlated.
 I created a feature "SBA_portion" corresponding to the ratio between the SBA's guaranteed amount and the gross amount approved (SBA_Appv / GrAppv).
-![](images/portion.png)
+
+<p align="center">
+    <img src=images/portion.png>
+<\p>
+
 The median value of "SBA_portion" is much lower for charged-off loans (50%) than paid in full loans (75%).
 
 ### Recession
