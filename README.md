@@ -237,7 +237,7 @@ The results are calculated on a test set that was not used to select the model:
     <img src=images/conf_mat.png>
 </p>
 
-As a coomparison with the article, here are a few metrics calculated for both models:
+As a comparison with the article, here are a few metrics calculated for both models:
 
 | Metric    |  Article   |  My model  |
 | --- | --- |  --- |
