@@ -200,6 +200,8 @@ The default rate for loans starting during the Great Recession (34%) is much hig
 
 
 ## Model selection
+
+In all the modelization part, I focused on the **Real Estate sector in the State of California**, just like in the [article](https://www.tandfonline.com/doi/full/10.1080/10691898.2018.1434342). 
  
 ### Metrics
 
@@ -208,7 +210,7 @@ This is a binary classification problem. The goal is to detect the loans that wi
 The bank will lose both principal and interest if a loan is misclassified as "will pay in full" and then is charged off, 
 while the bank will only incur opportunity cost in the amount of interest if a loan is misclassified as "will charge-off".
 
-So we want to prioritize minimizing the false negative rate: the metric we will use is the **recall**: 
+So we want to prioritize minimizing the false negative rate: the metric we want to maximize is the **recall**: 
 
 ![](images/recall.png)
 
@@ -216,6 +218,33 @@ where:
 - TP = number of True Positive
 - FN = number of False Negative
 
+If we only try to maximize the recall, we could end up with a model that classifies most loans as "will charge-off". To try to avoid this issue and increase the specificity, we wil use the **ROC-AUC score** to select the model. The ROC-AUC score is also not sensitive to imbalanced datasets.
+
+### Model
+
+The selected algorithm is an XGboost Classifier (decision-tree-based algorithm).
+
+## Results
+
+The results are calculated on a test set that was not used to select the model:
+
+<p align="center">
+    <img src=images/ROC.png>
+</p>
+
+
+<p align="center">
+    <img src=images/conf_mat.png>
+</p>
+
+As a coomparison with the article, here are a few metrics calculated for both models:
+
+| Metric    |  Article   |  My model  |
+| --- | --- |  --- |
+| Accuracy| 67.8% |  72.9%  |
+| Precision | 68.9% | 56.0% |
+| **Recall** | **8.7%**  | **87.1%**  |
+| Specificity | 98.0%  |  65.8%  |
 
 ## Tools
 
@@ -226,8 +255,3 @@ where:
 * Matplotlib
 * Seaborn
 * Scikit-Learn
-
-
-## Future Improvements
-
-to be continued...
