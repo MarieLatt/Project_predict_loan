@@ -98,7 +98,7 @@ I filled the missing values and corrected possible errors in the dataset followi
 We need this feature because states have different economic environments that can influence the default rate:
 
 <p align="center">
-    <img src=images/states_map2.png >
+    <img src=images/states_map2.png width = 864>
 </p>
 
 ### Economic Sector
@@ -106,7 +106,7 @@ We need this feature because states have different economic environments that ca
 We extract the economic sector from the NAICS variable. The économic sector can be a usefull feature: in different sectors, the default rate are signicatively different:
 
 <p align="center">
-    <img src=images/sector.png height= 864>
+    <img src=images/sector.png height= 644>
 </p>
 
 ### New Business
