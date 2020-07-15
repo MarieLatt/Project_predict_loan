@@ -98,7 +98,7 @@ I filled the missing values and corrected possible errors in the dataset followi
 We need this feature because states have different economic environments that can influence the default rate:
 
 <p align="center">
-    <img src=images/states.png >
+    <img src=images/states_map2.png >
 </p>
 
 ### Economic Sector
